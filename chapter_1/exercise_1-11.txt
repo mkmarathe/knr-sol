@@ -1,0 +1,8 @@
+How would you test the word count program? What kinds of input 
+are most likely to uncomver bugs if ther are any? 
+
+-> input nothing. 
+-> input only spaces, and non-printable characters
+-> words with multiple leading white spaces
+-> short workds (1 char, 2char etc)
+
