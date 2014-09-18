@@ -1,4 +1,7 @@
+// pgm to count blanks, tabs and newlines
+//
 #include <stdio.h>
+
 
 main ()
 
