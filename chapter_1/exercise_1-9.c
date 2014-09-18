@@ -1,27 +1,21 @@
+// pgm to copy ip to op replacing each string one more blanks by a single blank
+
 #include <stdio.h>
 
-/* Run this program on itself (this file) and the following string "    " 
- * will be only one blank long.
- */
 
-main ()
-
+int main ()
 {
 	int	c; 
+	int last_space=0;
 
 	while ((c = getchar()) != EOF) {
-
-		if (c == ' ') {
-
-			putchar(' ');
-			while ((c = getchar()) != EOF && c == ' ')
-
-				;
-	
+		if (c == ' ')  {
+			if (last_space !=1)
+				putchar(c);
+			last_space = 1;
+			continue;
 		}
-		if (c != EOF)
-
-			putchar(c);
-
+		last_space = 0;
+		putchar(c);
 	}
 }
